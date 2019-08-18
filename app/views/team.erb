@@ -1,15 +1,9 @@
-<h1>Teams</h1>
+<h1><%= @team_name %></h1>
 
-<div class="team">
-  <h3>Name: <%= @team.name %></h3><br>
-  <h4>Motto: <%= @team.motto %></h4><br>
-</div><br>
+<h2>Team Motto: <%= @team_motto %></h2>
 
-<h1>Heroes</h1>
-<% @heroes.each do |hero| %>
-  <div class="hero">
-    <p>Name: <%= hero.name %></p><br>
-    <p>Power: <%= hero.power %></p><br>
-    <p>Biography: <%= hero.biography %></p>
-  </div><br>
-<% end %>
+<% @team_members.each do |member| %>
+<h2>Hero Name: <%= member[:name] %></h2>
+<p>Hero Power: <%= member[:power] %></p>
+<p>Hero Biography: <%= member[:bio] %></p>
+<%end%>
